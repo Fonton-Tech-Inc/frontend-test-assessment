@@ -27,3 +27,11 @@ Consider factors such as usability, design consistency, accessibility, and overa
 ### 2. How would you improve the codebase to enhance its quality?
 
 Think about aspects like readability, maintainability, performance, and scalability.
+
+## IMPORTANT
+
+We're really interested in hearing your own insights and opinions on the project, not AI generated answer.
+
+Please provide your thoughts based on your own experience and understanding.
+
+It would also be great if you could attach screenshots of the app to illustrate your points, especially when discussing any areas for improvement.

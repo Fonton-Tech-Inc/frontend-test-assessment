@@ -53,6 +53,23 @@ export const useTodos = () => {
     );
   }, []);
 
+  const reorderTodos = useCallback((activeId: string, overId: string) => {
+    setTodos(prev => {
+      const activeIndex = prev.findIndex(todo => todo.id === activeId);
+      const overIndex = prev.findIndex(todo => todo.id === overId);
+
+      if (activeIndex === -1 || overIndex === -1 || activeIndex === overIndex) {
+        return prev;
+      }
+
+      const newTodos = [...prev];
+      const [removed] = newTodos.splice(activeIndex, 1);
+      newTodos.splice(overIndex, 0, removed);
+
+      return newTodos;
+    });
+  }, []);
+
   const activeTodosCount = todos.filter(todo => !todo.completed).length;
   const completedTodosCount = todos.filter(todo => todo.completed).length;
 
@@ -65,6 +82,7 @@ export const useTodos = () => {
     deleteTodo,
     clearCompleted,
     updateTodoText,
+    reorderTodos,
     activeTodosCount,
     completedTodosCount,
   };

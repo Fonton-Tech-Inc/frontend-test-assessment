@@ -15,6 +15,7 @@ export const TodoApp = () => {
     deleteTodo,
     clearCompleted,
     updateTodoText,
+    reorderTodos,
     activeTodosCount,
     completedTodosCount,
   } = useTodos();
@@ -49,6 +50,7 @@ export const TodoApp = () => {
               onToggle={toggleTodo}
               onDelete={deleteTodo}
               onUpdate={updateTodoText}
+              onReorder={reorderTodos}
             />
           </>
         )}
